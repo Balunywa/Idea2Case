@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Generated Business Case</h2>
+      <div class="card">
+        <div class="card-body">
+          {{ business_case|safe }}
+        </div>
+      </div>
+      <a href="{{ url_for('dashboard') }}" class="btn btn-primary mt-3">Back to Dashboard</a>
+    </div>
+  </div>
+{% endblock %}

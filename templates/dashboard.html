@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Dashboard</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Problem</th>
+            <th>Generate Business Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for idea in ideas %}
+          <tr>
+            <td>{{ idea.title }}</td>
+            <td>{{ idea.problem }}</td>
+            <td>
+              <a href="{{ url_for('select_template', idea_id=idea.id) }}" class="btn btn-primary">Select Template</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
