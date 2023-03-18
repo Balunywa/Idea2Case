@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Generated Business Case</h2>
+      <div class="card">
+        <div class="card-body">
+          <pre>{{ business_case }}</pre>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a href="{{ url_for('select_template') }}" class="btn btn-primary">Select Another Template</a>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -5,9 +5,10 @@ from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 
+
 db = SQLAlchemy()
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -18,7 +19,6 @@ class User(db.Model):
 
     def __repr__(self):
         return f'<User {self.username}>'
-
 
 class Idea(db.Model):
     id = db.Column(db.Integer, primary_key=True)

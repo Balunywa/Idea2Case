@@ -21,3 +21,16 @@ class SubmitIdeaForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     problem = TextAreaField('Problem', validators=[DataRequired()])
     submit = SubmitField('Submit Idea')
+
+class IdeaForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    problem = TextAreaField('Problem', validators=[DataRequired()])
+    target_market = StringField('Target Market')
+    competition = TextAreaField('Competition')
+    key_differentiators = TextAreaField('Key Differentiators')
+    submit = SubmitField('Submit Idea')
+
+class AddTemplateForm(FlaskForm):
+    name = StringField('Template Name', validators=[DataRequired()])
+    content = TextAreaField('Template Content', validators=[DataRequired()])
+    submit = SubmitField('Add Template')
