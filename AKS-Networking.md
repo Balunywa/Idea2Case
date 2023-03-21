@@ -30,3 +30,4 @@ The following table compares the capabilities and characteristics of three netwo
 | Pod connectivity performance                                               | Additional hop adds minor latency | Performance on par with VMs in a VNet | Performance on par with VMs in a VNet |
 | Kubernetes Network Policies                                                | Calico                     | Azure Network Policies, Calico, Cilium | Calico                    |
 | OS platforms supported                                                     | Linux only                 | Linux and Windows Server 2022 | Linux and Windows Server 2022 |
+| Application Gateway as an Ingress Controller (AGIC)                        | Supported                  | Supported                     | Not supported
