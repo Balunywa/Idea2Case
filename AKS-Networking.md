@@ -18,9 +18,9 @@ The following table compares the capabilities and characteristics of three netwo
 | -------------------------------------------------------------------------- | -------------------------- | -------------------------- | ------------------------- |
 | Deploy cluster in existing or new virtual network                          | Supported - UDRs manually applied | Supported                  | Supported                 |
 | Pod-pod connectivity                                                       | Supported                  | Supported                  | Supported                 |
-| Pod-VM connectivity; VM in the same virtual network                        | Works when initiated by pod | Works both ways            | Works both ways           |
-| Pod-VM connectivity; VM in peered virtual network                          | Works when initiated by pod | Works both ways            | Works both ways           |
-| On-premises access using VPN or Express Route                              | Works when initiated by pod | Works both ways            | Works both ways           |
+| Pod-VM connectivity; VM in the same virtual network                        | Works when initiated by pod | Works both ways            | Works when initaited by pod           |
+| Pod-VM connectivity; VM in peered virtual network                          | Works when initiated by pod | Works both ways            | Works when initaited by pod        |
+| On-premises access using VPN or Express Route                              | Works when initiated by pod | Works both ways            | Works when initaited by pod        |
 | Access to resources secured by service endpoints                           | Supported                  | Supported                  | Supported                 |
 | Expose Kubernetes services using a load balancer service, App Gateway, or ingress controller | Supported                  | Supported                  | Supported                 |
 | Default Azure DNS and Private Zones                                        | Supported                  | Supported                  | Supported                 |
