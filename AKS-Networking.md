@@ -9,7 +9,7 @@ The table below provides an overview of three different network models available
 | Azure CNI        | - Full virtual network connectivity is required for pods<br>- Advanced AKS features (such as virtual nodes) are needed<br>- Sufficient IP address space is available<br>- Pod to pod and pod to VM connectivity needed<br>- External resources need to reach pods directly<br>- AKS network policies are required |
 | Azure CNI Overlay | - IP address shortage is a concern<br>- Scaling up to 1000 nodes and 250 pods per node is sufficient<br>- Additional hop for pod connectivity is acceptable<br>- Complex network configuration is not a barrier<br>- AKS egress requirements can be met |
 
-##Comparison of Network Models
+## Comparison of Network Models
 
 The following table compares the capabilities and characteristics of three network models in Azure Kubernetes Service (AKS): Kubenet, Azure CNI, and Azure CNI Overlay. Understanding the differences between these models is crucial for selecting the appropriate network model based on the specific requirements of your Kubernetes cluster.
 
