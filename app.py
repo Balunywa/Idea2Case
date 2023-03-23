@@ -10,6 +10,9 @@ from sqlalchemy.orm import load_only
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from flask_wtf import CSRFProtect
 from flask_seasurf import SeaSurf
+import requests
+# Import routes
+from routes import *
 
 
 app = Flask(__name__)
@@ -32,8 +35,6 @@ login_manager.login_view = 'login'
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# Import routes
-from routes import *
 
 if __name__ == '__main__':
     app.run(debug=True)
