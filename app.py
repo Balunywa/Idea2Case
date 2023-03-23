@@ -32,7 +32,7 @@ login_manager.login_view = 'login'
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# Import routes
+# Import routess
 from routes import *
 
 if __name__ == '__main__':
