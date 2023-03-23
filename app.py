@@ -35,6 +35,8 @@ login_manager.login_view = 'login'
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+# Import routes
+from routes import *
 
 if __name__ == '__main__':
     app.run(debug=True)
