@@ -7,7 +7,7 @@ The table below provides an overview of three different network models available
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Kubenet          | - IP address space conservation is a priority<br>- Simple configuration<br>- Fewer than 400 nodes per cluster<br>- Kubernetes internal or external load balancers sufficient for reaching pods from outside the cluster<br>- Manually managing and maintaining user-defined routes is acceptable |
 | Azure CNI        | - Full virtual network connectivity is required for pods<br>- Advanced AKS features (such as virtual nodes) are needed<br>- Sufficient IP address space is available<br>- Pod to pod and pod to VM connectivity needed<br>- External resources need to reach pods directly<br>- AKS network policies are required |
-| Azure CNI Overlay | - IP address shortage is a concern<br>- Scaling up to 1000 nodes and 250 pods per node is sufficient<br>- Additional hop for pod connectivity is acceptable<br>- Complex network configuration is not a barrier<br>- AKS egress requirements can be met |
+| Azure CNI Overlay | - IP address shortage is a concern<br>- Scaling up to 1000 nodes and 250 pods per node is sufficient<br>- Additional hop for pod connectivity is acceptable<br>- Simplier network configuration <br>- AKS egress requirements can be met |
 
 ## Comparison of Network Models
 
@@ -18,9 +18,9 @@ The following table compares the capabilities and characteristics of three netwo
 | -------------------------------------------------------------------------- | -------------------------- | -------------------------- | ------------------------- |
 | Deploy cluster in existing or new virtual network                          | Supported - UDRs manually applied | Supported                  | Supported                 |
 | Pod-pod connectivity                                                       | Supported                  | Supported                  | Supported                 |
-| Pod-VM connectivity; VM in the same virtual network                        | Works when initiated by pod | Works both ways            | Works both ways           |
-| Pod-VM connectivity; VM in peered virtual network                          | Works when initiated by pod | Works both ways            | Works both ways           |
-| On-premises access using VPN or Express Route                              | Works when initiated by pod | Works both ways            | Works both ways           |
+| Pod-VM connectivity; VM in the same virtual network                        | Works when initiated by pod | Works both ways            | Works when initaited by pod           |
+| Pod-VM connectivity; VM in peered virtual network                          | Works when initiated by pod | Works both ways            | Works when initaited by pod        |
+| On-premises access using VPN or Express Route                              | Works when initiated by pod | Works both ways            | Works when initaited by pod        |
 | Access to resources secured by service endpoints                           | Supported                  | Supported                  | Supported                 |
 | Expose Kubernetes services using a load balancer service, App Gateway, or ingress controller | Supported                  | Supported                  | Supported                 |
 | Default Azure DNS and Private Zones                                        | Supported                  | Supported                  | Supported                 |
@@ -30,3 +30,4 @@ The following table compares the capabilities and characteristics of three netwo
 | Pod connectivity performance                                               | Additional hop adds minor latency | Performance on par with VMs in a VNet | Performance on par with VMs in a VNet |
 | Kubernetes Network Policies                                                | Calico                     | Azure Network Policies, Calico, Cilium | Calico                    |
 | OS platforms supported                                                     | Linux only                 | Linux and Windows Server 2022 | Linux and Windows Server 2022 |
+| Application Gateway as an Ingress Controller (AGIC)                        | Supported                  | Supported                     | Not supported
